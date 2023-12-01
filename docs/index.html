@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Este es una tipografía de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!-- Picnic es una librería de CSS basada en clases (sólo hay que añadir class="loquequieras" al tag que necesites) -->
+    <link rel="stylesheet" href="libs/picnic/picnic.css">
+
+    <!-- Prism es una librería para dar estilos a los bloques de código, necesitamos también añadir un fichero js -->
+    <link rel="stylesheet" href="libs/prism/prism.css">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prácticas</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Prácticas de Javascript</h1>
+
+        <article>
+            <h2>Práctica 1</h2>
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 1</h3>
+                <div class="foldable">
+                    <pre><code class="language-js">
+    let valor = 25;
+    if (true) {
+        console.log('hola que hase')
+    }
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 3</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 4</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 5</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 6</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 7</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <h2>Práctica 2</h2>
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 1</h3>
+                <div class="foldable">
+
+                </div>
+            </section>
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 2</h3>
+                <div class="foldable">
+            
+                </div>
+            </section>
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 3</h3>
+                <div class="foldable">
+            
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <!-- El script para que se vean los estilos en los bloques de código -->
+    <script src="libs/prism/prism.js"></script>
+
+    <!-- Mi script principal -->
+    <script src="main.js"></script>
+
+    <!-- Cargamos los ficheros de las prácticas -->
+    <script src="practicas/practica1.js"></script>
+    <script src="practicas/practica2.js"></script>
+</body>
+</html>
