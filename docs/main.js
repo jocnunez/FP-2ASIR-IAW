@@ -1,6 +1,6 @@
 {
     function toggleFolded(event) {
-        parent = event.target.parentElement;
+        let parent = event.target.parentElement;
         parent.classList.toggle("folded");
     }
 }

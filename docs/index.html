@@ -27,11 +27,39 @@
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 1</h3>
                 <div class="foldable">
+                    Copia el siguiente código y añade una instrucción que saque por consola el valor de la variable <span class="bold">b</span>.<br> 
+                    Escribe dicho valor en un comentario explicando también el porqué de ese resultado.
                     <pre><code class="language-js">
-    let valor = 25;
-    if (true) {
-        console.log('hola que hase')
-    }
+let a = 25
+let b = a
+a = 40
+                    </code></pre>
+                    Repite los mismos pasos con estos valores y la variable <span class="bold">d</span>:
+                    <pre><code class="language-js">
+let c = [25]
+let d = c
+c = [40]
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 2</h3>
+                <div class="foldable">
+                    Crea una función que admita un argumento. La función debe escribir por consola el tipo del parámetro que se le pase.<br>
+                    Copia las siguientes variables en tu código:
+                    <pre><code class="language-js">
+let var1 = 25
+let var2 = "Un texto"
+let var3 = false
+let var4 = { key: "value" }
+let var5 = null
+                    </code></pre>
+                    A continuación añade en tu código una llamada a la función creada por cada una de las variables.<br>
+                    Al ejecutarse el código, en la consola deberían salir 5 líneas, cada una con el tipo del valor correspondiente.<br>
+                    Escribe después de cada llamada a la función un comentario indicando la respuesta obtenida. Ejemplo:
+                    <pre><code class="language-js">
+nombreDeMiFuncion(var0) //undefined
                     </code></pre>
                 </div>
             </section>
@@ -39,58 +67,131 @@
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 3</h3>
                 <div class="foldable">
-
+                    Crea una función que retorne el IVA (del 21%) de un precio pasado por parámetro.<br>
+                    Haz que cada vez que se pulse el botón con id="<span class="bold">calcularIVA</span>" se ejecute la función que creaste pasándole el valor del campo <span class="bold">precioIVA</span> y que escriba el resultado en el campo con id="<span class="bold">resultadoIVA</span>".
+                    <fieldset class="centered">
+                        <input id="precioIVA" type="number" placeholder="Precio"><input id="calcularIVA" type="button" class="button" value="Calcular IVA"><br>
+                        El IVA sobre el precio dado es de: <span id="resultadoIVA"></span>
+                    </fieldset>
                 </div>
             </section>
 
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 4</h3>
                 <div class="foldable">
-
+                    Cada vez que el usuario modifica el valor de un campo de entrada de texto, éste lanza el Evento <span class="bold">"input"</span><br>
+                    Escucha ese evento en el campo con id="<span class="bold">texto</span>" para que, cuando ocurra, se lance una función que hayas creado previamente.<br>
+                    La función debe escribir en el campo con id="<span class="bold">numCaracteres</span>" la longitud del texto escrito en ese momento.
+                    <fieldset class="big centered">
+                        <input id="texto" type="string" placeholder="Introduce un texto"><br>
+                        Número de caracteres: <span id="numCaracteres"></span>
+                    </fieldset>
                 </div>
             </section>
 
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 5</h3>
                 <div class="foldable">
-
+                    Crea una variable con un array vacío <span class="bold">[]</span>.<br>
+                    Escribe el valor de la variable en el campo con id="<span class="bold">list</span>".
+                    Para conservar el formato del array, en lugar de insertar la variable directamente en el innerHTML, lo convertiremos a string previamente con la función <span class="bold">JSON.stringify(tuVariable)</span>
+                    Escucha el evento de click del botón con id="<span class="bold">addNumber</span>".
+                    Si existe un número en el campo <span class="bold">item</span> se deberá añadir a tu variable de array.<br>
+                    Por último, actualiza el valor en pantalla.
+                    <fieldset class="centered">
+                        <input id="item" type="number" placeholder="Nuevo número"><input id="addNumber" type="button" class="button" value="Añadir"><br>
+                        La lista actual es: <span id="list"></span>
+                    </fieldset>
                 </div>
             </section>
 
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 6</h3>
                 <div class="foldable">
-
+                    Crea una función que retorne el valor más alto de un array de números pasado por parámetro.<br>
+                    Modifica la función del apartado anterior para que una vez añadido un número a la lista se guarde en una variable su valor máximo.<br>
+                    Además también deberás actualizar el campo con id="<span class="bold">max</span>" con el valor obtenido.
+                    <fieldset class="centered">
+                        El valor máximo es: <span id="max"></span>
+                    </fieldset>
                 </div>
             </section>
 
             <section>
                 <h3 onclick="toggleFolded(event)">Ejercicio 7</h3>
                 <div class="foldable">
+                    Captura el evento de click del botón con id="<span class="bold">addItem</span>".
+                    Crea una varibale inicializada con un array vacío <span class="bold">[]</span>.
+                    La función que responda al evento deberá encargarse de:<br>
+                    <ul>
+                        <li>Crear una varibale inicializada con un objeto vacío <span class="bold">{}</span></li>
+                        <li>Añadir a la variable un campo nombre con el valor recogido de id="<span class="bold">name</span>"</li>
+                        <li>Añadir a la variable un campo apellidos con el valor recogido de id="<span class="bold">surname</span>"</li>
+                        <li>Añadir a la variable un campo edad con el valor recogido de id="<span class="bold">age</span>"</li>
+                        <li>Añadir el objeto al array</li>
+                        <li>Escribir en el innerHTML del campo con id="<span class="bold">total</span>" la longitud del array</li>
+                    </ul>
+                    <fieldset class="centered">
+                        <input id="name" type="text" placeholder="Nombre"><br>
+                        <input id="surname" type="text" placeholder="Apellidos"><br>
+                        <input id="age" type="number" placeholder="Edad"><input id="addItem" type="button" class="button" value="Añadir"><br>
+                        Número de elementos en la lista: <span id="total"></span>
+                    </fieldset>
 
+                </div>
+            </section>
+
+            <section>
+                <h3 onclick="toggleFolded(event)">Ejercicio 8</h3>
+                <div class="foldable">
+                    Amplía el ejercicio anterior para que se guarde el array en el localStorage.<br>
+                    Ten encuenta que para guardar con el mismo formato en localStorage deberás codificarlo en string previamente con la función <span class="bold">JSON.stringify(tuVariable)</span><br>
+                    Para recuperar el valor del localStorage haremos el proceso inverso, convirtiendo el string a objeto con la función <span class="bold">JSON.parse(tuVariable)</span>
                 </div>
             </section>
         </article>
 
         <article>
-            <h2>Práctica 2</h2>
+            <h2>Práctica 2 (opcional): Lista de tareas</h2>
             <section>
-                <h3 onclick="toggleFolded(event)">Ejercicio 1</h3>
-                <div class="foldable">
-
-                </div>
-            </section>
-            <section>
-                <h3 onclick="toggleFolded(event)">Ejercicio 2</h3>
-                <div class="foldable">
-            
-                </div>
-            </section>
-            <section>
-                <h3 onclick="toggleFolded(event)">Ejercicio 3</h3>
-                <div class="foldable">
-            
-                </div>
+                <ol>
+                    <li>Guarda las tareas que vaya creando el usuario en un array (igual que en el ejercicio 7), pero teniendo en cuenta que:
+                        <ul>
+                            <li>El botón a escuchar es el que tiene id="<span class="bold">addTask</span>"</li>
+                            <li>Un campo de cada objeto guardará el texto del input con id="<span class="bold">task</span>"</li>
+                            <li>Existirá otro campo para saber si la tarea esta completada, inicialmente se guardará el valor <span class="bold">false</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Muestra por consola la lista cada vez que se modifique.
+                    </li>
+                    <li>
+                        Guarda y recupera la lista del localStorage.
+                    </li>
+                </ol>
+                <fieldset class="big centered">
+                    <input id="task" type="string" placeholder="Nueva tarea"><br>
+                    <button id="addTask">Añadir</button>
+                </fieldset>
+                <ol start="4">
+                    <li>
+                        Muy opcional: Busca en documentación de Javascript (recomiendo Mdn de Mozilla) cómo se crean elementos HTML y se
+                        añaden a un nodo.<br>
+                        En nuestro caso necesitamos construir un elemento compuesto por cada tarea y añadirlo al div con id="<span class="bold">taskList</span>".<br>
+                        Elemento de ejemplo:
+                    </li>
+                </ol>
+                <pre><code class="language-markup">
+&lt;label>
+    &lt;input type="checkbox" [checked]="elCampoBooleanDeLaTarea">
+    &lt;span class="checkable">elTextoDeLaTarea&lt;/span>
+&lt;/label>
+                </code></pre>
+                    
+                <fieldset class="big centered">
+                    <legend>Mi lista de tareas:</legend>
+                    <div id="taskList"></div>
+                </fieldset>
             </section>
         </article>
     </div>
