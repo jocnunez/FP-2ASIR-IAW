@@ -9,7 +9,7 @@ body {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     max-width: 1200px;
     margin: 20px auto;
-    padding: 15px 30px;
+    padding: 15px 50px;
     transition: height 1s;
 }
 
@@ -19,14 +19,75 @@ h2 {
 
 h3 {
     color: steelblue;
+    cursor: pointer;
+    padding: 0;
+}
+
+h3::after {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-left: .5rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.folded h3::after {
+  transform: rotate(90deg) translateX(-3px);
 }
 
 .foldable {
     padding: 10px;
-    transition: all 1s allow-discrete;
 }
 
 .folded .foldable {
     opacity: 0;
     display: none;
+}
+
+.bold {
+    color: orangered;
+    font-weight: bolder;
+}
+
+.centered {
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.centered input {
+    margin-right: 10px;
+    width: auto;
+}
+
+.centered.big {
+    width: 60%;
+}
+
+.centered.big input {
+    margin-right: 0;
+    width: 100%;
+}
+
+pre[class*=language-] {
+    margin: 1em;
+    padding: 0 20px;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: .3em;
 }
